@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		JUT5uAUWyGaKBn9RBTxlpuqlHVI=
+		So0zIa7AhKAJyLrrK5KJWWMmZQo=
 		</data>
 		<key>Headers/CardIO.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/EpaySDK-Swift.h</key>
 		<data>
-		lSnWEbG04PvOb093yZQB3Pz6KFA=
+		lvGNfETcMOkdRi03KWXlG89XD1A=
 		</data>
 		<key>Headers/EpaySDK.h</key>
 		<data>
@@ -50,35 +50,35 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6rPFNydc0ZI/EOksj9Gq1C+2sR4=
+		Otqf0PscGuArDlogD0d+XfrHNrQ=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		DrPwc21kS+HiLub9OumOYM1ZumM=
+		pqNZsG4iIkk1iF4E3+V9cVFhCrU=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ebPP/UOYJSIjXMkwI6CN0xRtafs=
+		QfvCGHNV/gY+4HOABrQlO0SFsmY=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		0jdLHr8EtcM3p6NbjXIBhNKH3VI=
+		UXvotW3sdV1wD+HryOewxRwH4pk=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		9IHxgMMJxZrG/o76uS+Y2dowfOw=
+		pqvoUQtWJeAHWwl9swcy27Nz4XM=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		0jdLHr8EtcM3p6NbjXIBhNKH3VI=
+		UXvotW3sdV1wD+HryOewxRwH4pk=
 		</data>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		gXWIK1ck6PLMogMvxvOtYQdU3Nw=
+		RyInHltU1hKZCleqdnPA7B1ph1s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		QUFreK4/qBaOLjd7Sgd2fIjVf/c=
+		D2mTW4yIjhltmnQc4tMYOg4qx9g=
 		</data>
 		<key>bins.json</key>
 		<data>
@@ -97,7 +97,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GFWqVGcB7uYVR0Z1o/lutRVFhOk=
+			ySiS0IDIk3ssOTmkhV0QMRpJLjw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -115,11 +115,15 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CO5D+I9kvm3rbSxzfiY79jsYAK8=
+			aXPgtW8F9t9sB7OND5g+CZ+ox70=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>module.modulemap</key>
+		<data>
+		em/P7CSvS0C3tGdl3GoSvaur73w=
+		</data>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -133,7 +137,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Cl8/Dt7ifeEtcARB94728GSi6kQ=
+			e+4gNX9xlwAurOJSQL7L2lIMHBM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -145,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ecJ0zdzie7hTeKs7jvtMBJyxlK9Uvm+s9LOwGaPO+k=
+			Pzzyj6tH5xUMbFVSM6QQMRJ2XBwCcBwAqxGATDey8FM=
 			</data>
 		</dict>
 		<key>Headers/CardIO.h</key>
@@ -208,7 +212,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Du2cDRoeXEb/wLtqt63xHWR7fv1EXKMWbOxN2EDnLs=
+			5WbiT7iWxgsyHHyWeoyMbcQo2iSVbJbRCOQcENN+mrM=
 			</data>
 		</dict>
 		<key>Headers/EpaySDK.h</key>
@@ -222,49 +226,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vRuD40C5lLb3biyAK/7tri4qyo4CntBV0gaxOZUBVyU=
+			XTknnudTkRa8wEJlUdAK5+plaOs4dD6YrQT26juxorE=
 			</data>
 		</dict>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mkCDJQx2UGyGWMxzjT1ELdCxolwKE3LJSVWTeSYOOfQ=
+			xQflumy0kczpRAusG6kIg0tFZRlUhPOS1GTjuym0RKk=
 			</data>
 		</dict>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ijwLPtNrKx8GNa08VVkAFfXVmpYihoyB+DLk7C9nT/E=
+			/I3L26NQ9PGyZxZ0v5eqFUp8ZoHrOmiwr4NDYzCJ4ck=
 			</data>
 		</dict>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yoDcweDPe9mWzvkUqm4bUR1Q8QBflP9QdDkYPtvzCWw=
+			cRtXwXl6GQGSpR6hYuwkiTTKMXBWHBa9eIPgO58T+Og=
 			</data>
 		</dict>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ijwLPtNrKx8GNa08VVkAFfXVmpYihoyB+DLk7C9nT/E=
+			/I3L26NQ9PGyZxZ0v5eqFUp8ZoHrOmiwr4NDYzCJ4ck=
 			</data>
 		</dict>
 		<key>Modules/EpaySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lX6IDNH0AFxTfdxW6bFig2Lc+ES3/v4OJjXWFgEgBBw=
+			U2P4Q2rpdv+wTTWAsLntvCWj91c8H7n4tgZxeOV4mi8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fmFUM1y2VK0IYPHBFpwHXRmQLHorbXx+Oe68qu07LOQ=
+			nAX1PoT6zdCGhLgCAoRsxdvkK+btMhn7ZhgSRu+19UY=
 			</data>
 		</dict>
 		<key>bins.json</key>
@@ -287,7 +291,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxMTAR5WGpdnlz3jTVjTva+3r2y5wUkPmRJi5BSDQHc=
+			wID8xvZx/hxKsgHaM41UHY7t/v9pqKPdEQYt8JTvyrs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -305,10 +309,17 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4NXmzRfmmUdeAmTfg7/X9yqg/O4X3eKKPOpfdt0aVCY=
+			POIEUnrh5sDYz9umq8f/YFdOr11gR4mfSvplaP0WaWw=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Kfaiw/yD6qePfY+wUCpJl87eS8FYeX0P5i54/fswrt4=
+			</data>
 		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
@@ -323,7 +334,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZWiEBwhHaX8xs1mmbDMKF21ReLtehd9K962XNARPLoo=
+			bdR6x3/5OcM/H/wb+Ea64eWM0hW9Kr3DyjAvscpqhTI=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EpaySDK
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EpaySDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
@@ -10,6 +10,7 @@ import ContactsUI
 import CoreGraphics
 import CoreMedia
 import CoreVideo
+import DeveloperToolsSupport
 @_exported import EpaySDK
 import Foundation
 import MobileCoreServices
@@ -23,6 +24,7 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public enum EnvironmentType {
   case prod
   case preProd
@@ -196,7 +198,10 @@ public struct AuthConfig {
   public var merchantName: Swift.String
   public var clientId: Swift.String
   public var clientSecret: Swift.String
-  public init(merchantId: Swift.String, merchantName: Swift.String, clientId: Swift.String, clientSecret: Swift.String)
+  public var isAppClip: Swift.Bool?
+  public var appClipToken: Swift.String?
+  public var appleMerchantId: Swift.String?
+  public init(merchantId: Swift.String, merchantName: Swift.String, clientId: Swift.String, clientSecret: Swift.String, isAppClip: Swift.Bool? = false, appClipToken: Swift.String? = nil, appleMerchantId: Swift.String? = nil)
 }
 extension Foundation.URLRequest {
   public var curlString: Swift.String {
@@ -208,9 +213,9 @@ public struct MaskedTextField : SwiftUI.UIViewRepresentable {
   public typealias UITextFieldEvent = (_ textField: UIKit.UITextField) -> Swift.Void
   @SwiftUI.Binding @_projectedValueProperty($text) public var text: Swift.String {
     get
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating set
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating _modify
   }
   public var $text: SwiftUI.Binding<Swift.String> {
@@ -218,9 +223,9 @@ public struct MaskedTextField : SwiftUI.UIViewRepresentable {
   }
   @SwiftUI.Binding @_projectedValueProperty($value) public var value: Swift.String {
     get
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating set
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating _modify
   }
   public var $value: SwiftUI.Binding<Swift.String> {
@@ -228,9 +233,9 @@ public struct MaskedTextField : SwiftUI.UIViewRepresentable {
   }
   @SwiftUI.Binding @_projectedValueProperty($complete) public var complete: Swift.Bool {
     get
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating set
-    @available(iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     nonmutating _modify
   }
   public var $complete: SwiftUI.Binding<Swift.Bool> {
@@ -341,72 +346,6 @@ public class Mask : Swift.CustomDebugStringConvertible, Swift.CustomStringConver
   }
   @objc deinit
 }
-public enum IconType : Swift.Int {
-  case font
-  case image
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SkyFloatingLabelTextFieldWithIcon : EpaySDK.SkyFloatingLabelTextField {
-  @_Concurrency.MainActor(unsafe) open var iconType: EpaySDK.IconType {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var iconImageView: UIKit.UIImageView!
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconImage: UIKit.UIImage? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var templateImage: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var iconLabel: UIKit.UILabel!
-  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconFont: UIKit.UIFont? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var iconText: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedIconColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconMarginLeft: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconMarginBottom: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var iconRotationDegrees: Swift.Double {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, iconType: EpaySDK.IconType)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) override open func updateColors()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
 public enum AffinityCalculationStrategy {
   case wholeString
   case prefix
@@ -423,7 +362,7 @@ public struct Notation {
   public init(character: Swift.Character, characterSet: Foundation.CharacterSet, isOptional: Swift.Bool)
 }
 public struct Invoice {
-  public init(id: Swift.String, amount: Swift.Double, currency: Swift.String, accountId: Swift.String, description: Swift.String, postLink: Swift.String, failurePostLink: Swift.String, isRecurrent: Swift.Bool, autoPaymentFrequency: EpaySDK.AutoPaymentFrequency, transferType: EpaySDK.TransferType? = nil, homebankToken: Swift.String? = nil, amountEditable: Swift.Bool = false, sender: EpaySDK.CardInfo? = nil, receiver: EpaySDK.CardInfo? = nil)
+  public init(id: Swift.String, amount: Swift.Double, currency: Swift.String, accountId: Swift.String, description: Swift.String, postLink: Swift.String, failurePostLink: Swift.String, isRecurrent: Swift.Bool, autoPaymentFrequency: EpaySDK.AutoPaymentFrequency, transferType: EpaySDK.TransferType? = nil, homebankToken: Swift.String? = nil, amountEditable: Swift.Bool = false, sender: EpaySDK.CardInfo? = nil, receiver: EpaySDK.CardInfo? = nil, masterPass: EpaySDK.MasterPassData? = nil)
 }
 public enum AutoPaymentFrequency : Swift.String {
   case weekly
@@ -469,6 +408,20 @@ extension Swift.String {
   override public init(primaryFormat: Swift.String = super, autocomplete: Swift.Bool = super, autocompleteOnFocus: Swift.Bool = super, autoskip: Swift.Bool = super, rightToLeft: Swift.Bool = super, affineFormats: [Swift.String] = super, affinityCalculationStrategy: EpaySDK.AffinityCalculationStrategy = super, customNotations: [EpaySDK.Notation] = super, onMaskedTextChangedCallback: ((_ textInput: any UIKit.UITextInput, _ value: Swift.String, _ complete: Swift.Bool, _ tailPlaceholder: Swift.String) -> ())? = nil, allowSuggestions: Swift.Bool = super)
   @objc override dynamic public init()
   @objc deinit
+}
+public struct MasterPassData {
+  public init(cardData: EpaySDK.MasterPassCardData, merchantName: Swift.String, session: Swift.String, masterPassAction: EpaySDK.MasterPassAction)
+}
+public struct MasterPassCardData {
+  public init(token: Swift.String, CardHolder: Swift.String, ExpiryDate: Swift.String, PANMask: Swift.String, CardStatus: Swift.Int)
+}
+public struct MasterPassAction {
+  public init(SaveCard: Swift.Bool, updateSaveCard: Swift.Bool?, recurring: Swift.Bool?)
+}
+extension EpaySDK.MasterPassCardData {
+  public var maskedCardNumber: Swift.String {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class SkyFloatingLabelTextField : UIKit.UITextField {
   @objc @_Concurrency.MainActor(unsafe) open var isLTRLanguage: Swift.Bool {
@@ -666,7 +619,7 @@ open class KeyboardObserver {
   @objc deinit
 }
 public enum TransferType : Swift.String, Swift.CaseIterable {
-  case P2P, AFT, OCT, CardId, byPhone
+  case P2P, AFT, OCT, CardId, byPhone, masterPass
   public init?(rawValue: Swift.String)
   public typealias AllCases = [EpaySDK.TransferType]
   public typealias RawValue = Swift.String
@@ -718,6 +671,7 @@ open class PaymentModel {
   public func loadPublicProfile(completion: @escaping (Swift.Bool) -> ())
   public func loadLogoImage(completion: @escaping () -> ())
   public func makePayment(completion: @escaping (Swift.Bool) -> ())
+  public func makePaymentWithApplePay(completion: @escaping (Swift.Bool) -> ())
   @objc deinit
 }
 extension Foundation.CharacterSet {
@@ -763,9 +717,6 @@ public struct Country {
 }
 extension EpaySDK.EnvironmentType : Swift.Equatable {}
 extension EpaySDK.EnvironmentType : Swift.Hashable {}
-extension EpaySDK.IconType : Swift.Equatable {}
-extension EpaySDK.IconType : Swift.Hashable {}
-extension EpaySDK.IconType : Swift.RawRepresentable {}
 extension EpaySDK.AffinityCalculationStrategy : Swift.Equatable {}
 extension EpaySDK.AffinityCalculationStrategy : Swift.Hashable {}
 extension EpaySDK.AutoPaymentFrequency : Swift.Equatable {}
